@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model KeyWordModel
+
+@{
+    var searchResult = ViewBag.searchResult;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+    <form method="post">
+        <input asp-for="KeyWord" />
+        <input type="submit" value="Search" />
+    </form>
+
+    <br />
+
+    @{
+        if(searchResult != null)
+        {
+            <p>@searchResult.Total results in @searchResult.Ts seconds</p>
+            foreach(var data in searchResult.Results)
+            {
+                <h4>Title - @data.Title</h4>
+                <p>Link - <a href="@data.Link">@data.Link</a> </p>
+                <p>Description - @data.Description</p>
+            }
+        }
+    }
+    
+</div>

@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/API Consume - Google Search/.vs/API Consume - Google Search/FileContentIndex
+/API Consume - Google Search/API Consume - Google Search/bin/Debug/net5.0
+/API Consume - Google Search/API Consume - Google Search/obj
+/API Consume - Google Search/.vs/API Consume - Google Search/v17
